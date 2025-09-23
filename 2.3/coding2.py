@@ -14,3 +14,13 @@ Judge 4: 8.5
 Judge 5: 9
 Your Olympic score is 8.0
 """
+
+first = float(input("You can only give a maximum of 10 points \n First Judge Rating: "))
+second = float(input("Second Judge Rating: "))
+third = float(input("Third Judge Rating: "))
+fourth = float(input("Fourth Judge Rating: "))
+fifth = float(input("Fifth Judge Rating: "))
+
+avg = (first + second + third + fourth + fifth) / 5
+
+print("Your Olympic score is " + str(avg))
