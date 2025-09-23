@@ -25,3 +25,21 @@ Would you like fries for $3? (Yes/No)
 > yes
 Your total is $3.42
 """
+burger = input("Welcome to McDonalds, \n Would you like a burger for $5? ")
+
+fries = input("Would you like some fries for $3? ")
+
+burger = burger.lower()
+fries = fries.lower()
+
+if burger == "yes" and fries == "yes":
+    print("Your total is $3.42")
+
+elif burger == "yes" and fries == "no":
+    print("Your total is $5.70")
+
+elif burger == "no" and fries == "yes":
+    print("Your total is $3.42")
+
+else:
+    print("Okay, have a nice day, bye")
