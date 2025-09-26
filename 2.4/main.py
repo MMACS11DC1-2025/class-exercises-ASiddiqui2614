@@ -10,5 +10,5 @@ file = open("2.4/responses.csv")
 
 
 for person in file:
-    if "ashar" in line.lower():
-        print(line)
+    if "ashar" in person.lower():
+        print(person)
