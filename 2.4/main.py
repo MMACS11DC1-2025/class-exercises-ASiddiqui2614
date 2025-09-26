@@ -6,9 +6,14 @@ file = open("2.4/responses.csv")
 # print(data)
 # datalist = data.split(",")
 # print(datalist)
-
+lines = []
 
 
 for person in file:
     if "ashar" in person.lower():
         print(person)
+
+for line in file:
+    lines.append(line.split(","))
+print(lines)
+
