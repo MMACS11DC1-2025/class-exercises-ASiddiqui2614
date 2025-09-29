@@ -9,9 +9,9 @@ file = open("2.4/responses.csv")
 lines = []
 
 
-for person in file:
-    if "ashar" in person.lower():
-        print(person)
+for music in file:
+    if "rock" in music.lower():
+        print(music)
 
 for line in file:
     lines.append(line.split(","))
