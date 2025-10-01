@@ -8,14 +8,32 @@ Test as you go! Describe in your comments what steps you took to test your code.
 """
 file = open("2.4/responses.csv")
 lines = []
-rockLikers = []
-
+ppl = []
+nameid = 0
 for line in file:
-    lines.append(line.lower(line).split(","))
-# print(lines)
+    lines.append(line.lower().split(","))
 
-for music in lines:
-    if "Rock" in music:
-        # print(music)
-        rockLikers.append(music[1])
-        print(rockLikers)
+
+answer = input("What is your full name? \n").lower().strip()
+
+for person in range(len(lines)):
+    if answer == lines[person][1].lower():
+        nameid = int(lines[person][0])
+
+for person in range(len(lines)):
+    if person != nameid:
+        simiAmount = 0
+        for i in [3, 7]:
+            if lines[nameid][i] == lines[person][i]:
+                simiAmount += 1
+        # print(person)
+        # print(simiAmount)
+        if simiAmount == 2:
+            ppl.append(int(lines[person][0]))
+
+
+
+for person in ppl:
+    print("You are most similar to " + lines[person][1] + " in terms of your favorite animal and music choice")
+    
+
