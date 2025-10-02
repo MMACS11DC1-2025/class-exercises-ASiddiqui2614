@@ -16,10 +16,13 @@ for line in file:
 
 answer = input("What is your full name? \n").lower().strip()
 
+#finds user id
 for person in range(len(lines)):
     if answer == lines[person][1].lower():
         nameid = int(lines[person][0])
 
+#finds whoever is similar to user based on their choice of pet and music preferance
+#person is other person. here, we are checking to make sure it's not comparing to user
 for person in range(len(lines)):
     if person != nameid:
         simiAmount = 0
@@ -32,7 +35,7 @@ for person in range(len(lines)):
             ppl.append(int(lines[person][0]))
 
 
-
+#output
 for person in ppl:
     print("You are most similar to " + lines[person][1] + " in terms of your favorite animal and music choice")
     
