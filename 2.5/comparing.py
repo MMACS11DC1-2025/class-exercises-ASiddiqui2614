@@ -5,6 +5,8 @@ You must use the class' datafile, 'responses.csv' and analyze it
 You must use user input to add interactivity to the program.
 You must design your algorithm in English first, then translate it to Python code.
 Test as you go! Describe in your comments what steps you took to test your code.
+
+User inputs their name, program finds most similar person, if no one is similar, it outputs for that too
 """
 file = open("2.4/responses.csv")
 lines = []
@@ -15,7 +17,7 @@ for line in file:
     lines.append(line.lower().split(","))
 
 while confirm:
-    answer = input("What is your full name? \n").lower().strip()
+    answer = input("What is your full name? (Capitalization matters) \n").lower().strip()
     for person in lines:
         if answer == person[1].lower():
             confirm = False
