@@ -38,7 +38,9 @@ for person in range(len(lines)):
         if simiAmount == 2:
             ppl.append(int(lines[person][0]))
 #output
-for person in ppl:    
-        print("You are most similar to " + lines[person][1] + " in terms of your favorite animal and music choice")
+if ppl == []:
+    print("Sorry, no one is similar to you in music and animal preferences. That just makes you special though.")
+else:  
+    print("You are most similar to " + lines[person][1] + " in terms of your favorite animal and music choice")
     
 
