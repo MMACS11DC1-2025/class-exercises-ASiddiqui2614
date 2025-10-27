@@ -7,6 +7,8 @@ Write recursive functions for each of the following problems:
 # Remember that n! is defined as n * (n-1)! and 0! is 1
 def factorial(n):
     # TODO implement this
+    if n * (n-1)!:
+        return 0! = 1
     return 1
 
 print(factorial(1)) # Expected output: 1
