@@ -8,6 +8,7 @@ t.hideturtle()
 
 # creates a certain amount of semi erased spirals that looks pretty cool, amt of times is based on user input
 count = int(input("How many times do you want to repeat the spiral? "))
+print("Function has been repeated " + str(count) + " times.")
 def draw_spiral(count):
   if count == 0:
     return
@@ -29,4 +30,3 @@ def draw_spiral(count):
   
 draw_spiral(count)
 turtle.done()
-    
