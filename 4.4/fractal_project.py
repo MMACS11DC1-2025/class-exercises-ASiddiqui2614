@@ -17,6 +17,7 @@ def draw_spiral(count):
   if count == 0:
     return
   
+  #makes spiral and changes color based on user input
   colors = colors_dict[c]
   for x in range(200):
       t.pencolor(colors[x % len(colors)])
@@ -24,7 +25,7 @@ def draw_spiral(count):
       t.forward(x)
       t.left(59)
   t.right(239)
-  
+  #deletes spiral somewhat which gives it cool remenants
   for x in range(200, 0, -3):
     t.pencolor('black')
     t.width(x / 100 + 10)
