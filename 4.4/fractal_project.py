@@ -12,7 +12,7 @@ t.hideturtle()
 # creates a certain amount of semi erased spirals that looks pretty cool, amt of times is based on user input
 count = int(input("How many times do you want to repeat the spiral? "))
 print("Function has been repeated " + str(count) + " times.")
-c = input("What color do you want it to be? bg, rg, or rg. Say exactly like that: ")
+c = input("What color do you want it to be? bg(blue-green), rg(red-green), or rb(red-blue). Say exactly like that: ")
 def draw_spiral(count):
   if count == 0:
     return
