@@ -12,3 +12,5 @@ Color palettes are as follow: RG(RE-GREEN), RB(RED-BLUE), BG(BLUE-GREEN), JG(WEI
 This can honestly repeat any number of times, because the program doesn't get laggy because of how slow and simple it is, it's just layering over itself, so the user can enter any value for recusion
 
 Since I used a tutorial to start off with, all the beginning code didn't require any debugging. Only what I added needed debugging, and all I added was the color palettes and recursion. Since color palettes were really easy to make, I didn't actually need to troubleshoot anything there, and I didn't debug that much for the recursion either, I just experimented slightly to figure out how to make my counter go down.
+
+This is the closest thing I could find to the tutorial I had. I added the erase feature onto it afterwards.: https://www.youtube.com/watch?v=97XCTnF84g4&t=2s
