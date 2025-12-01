@@ -13,18 +13,14 @@ def colour(r, g, b):
     
    
 
-file = Image.open("jellybean.png")
+file = Image.open("6.7/tree.png")
 jbImage = file.load()
 
 t1 = time.time()
 
-yellowPixels = []
-redPixels = []
+
 greenPixels = []
-bluePixels = []
-pinkPixels = []
-blackPixels = []
-orangePixels = []
+
 
 width = file.width
 height = file.height
@@ -75,5 +71,5 @@ elif rating <= 100:
 
 timings = "It took {:.2f}s to import the PIL, {:.2f}s to load the image, and {:.2f}s to do the loop. All in all it took {:.2f}s.".format(module_load, image_open_load, loop, entire)
 print(timings)
-
-
+perc = "{:.3f}% of the picture is green".format(rating)
+print(perc)
