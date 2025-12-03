@@ -6,8 +6,10 @@ from PIL import Image
 
 counter = 0
 
+pics = []
+
 def colour(r, g, b):
-    if  0 < r < 86 and g <= 158 and b < 58:
+    if  5 <= r < 202 and 20 <= 217 and 0 <= b <= 109:
         return "green"
 
     
@@ -15,6 +17,8 @@ def colour(r, g, b):
 
 file = Image.open("6.7/tree.png")
 jbImage = file.load()
+
+
 
 t1 = time.time()
 
