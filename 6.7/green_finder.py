@@ -21,7 +21,7 @@ parrot = "6.7/parrot.png"
 pics.append(parrot)
 
 def colour(r, g, b):
-        if  51.5 <= r <= 89 and 72.5 <= g <= 217 and 30.5 <= b <= 80.5:
+        if  (37 <= r <= 50 and 150 <= g):
             return "green"
 
 for file in pics:
