@@ -8,3 +8,20 @@ exercises to include calculations, if you wish.
 Remember to design your algorithm in English first, then translate it to Python 
 code. Test as you go!
 """
+
+num1 = input("Enter your first number: ")
+op = input("Enter your operation: ")
+num2 = input("Enter your second number: ")
+
+answer = 0
+
+if op == "+":
+    answer = float(num1) + float(num2)
+elif op == "/":
+    answer = float(num1) / float(num2)
+elif op == "*":
+    answer = float(num1) * float(num2)
+elif op == "-":
+    answer = float(num1) - float(num2)
+    
+print("The answer is " + str(answer))
