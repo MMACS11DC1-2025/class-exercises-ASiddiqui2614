@@ -1,10 +1,10 @@
 import time
 
+import sixseven_func as six
+
 t0 = time.time()
 
 from PIL import Image
-
-counter = 0
 
 pics = []
 
@@ -20,9 +20,9 @@ pics.append(pepper)
 parrot = "6.7/parrot.png"
 pics.append(parrot)
 
-def colour(r, g, b):
-        if  (37 <= r <= 50 and 150 <= g):
-            return "green"
+ratinglist = []
+
+
 
 for file in pics:
     file1 = Image.open(file)
@@ -32,6 +32,7 @@ for file in pics:
 
     width = file1.width
     height = file1.height
+    counter = 0
 
     t1 = time.time()
 
@@ -44,19 +45,16 @@ for file in pics:
             pixel_g = jbImage[x, y][1]
             pixel_b = jbImage[x, y][2]
 
-            if colour(pixel_r, pixel_g, pixel_b) == "green":
+            if six.colour(pixel_r, pixel_g, pixel_b) == "green":
                 greenPixels.append(jbImage[x, y])
                 counter += 1
-
 
     t2 = time.time()
 
     numGreen = len(greenPixels)
 
     totalPixels = width*height
-    greenRatio = numGreen / totalPixels
-
-    greenPercent = greenRatio * 100
+    print(totalPixels)
 
     t3 = time.time()
 
@@ -81,8 +79,24 @@ for file in pics:
         print("This picture is soooo good, enough green to last for a long time, it makes me very happy :)))")
     elif rating <= 100:
         print("This is too much green, why do you need so much")
-
+    
     timings = "It took {:.2f}s to import the PIL, {:.2f}s to load the image, and {:.2f}s to do the loop. All in all it took {:.2f}s.".format(module_load, image_open_load, loop, entire)
     print(timings)
     perc = "{:.3f}% of the picture is green".format(rating)
     print(perc)
+    ratinglist.append(rating)
+#print(ratinglist)
+
+for i in range(len(ratinglist)):
+    
+    smallest_score = ratinglist[i]
+    smallest_index = i
+
+    for j in range(i+1, len(ratinglist)):
+        if ratinglist[j] < smallest_score:
+            smallest_score = ratinglist[j]
+            smallest_index = j
+
+    ratinglist[smallest_index], ratinglist[i] = ratinglist[i], ratinglist[smallest_index]
+
+print(ratinglist)
