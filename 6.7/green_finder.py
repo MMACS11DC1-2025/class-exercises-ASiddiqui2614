@@ -20,6 +20,24 @@ pics.append(pepper)
 parrot = "6.7/parrot.png"
 pics.append(parrot)
 
+flower = "6.7/green_flower.png"
+pics.append(flower)
+
+field = "6.7/greenfield.png"
+pics.append(field)
+
+field2 = "6.7/greenfield2.png"
+pics.append(field2)
+
+waterfall = "6.7/waterfall.png"
+pics.append(waterfall)
+
+leaf = "6.7/leaf.png"
+pics.append(leaf)
+
+leaf2 = "6.7/leaf2.png"
+pics.append(leaf2)
+
 ratinglist = []
 
 
