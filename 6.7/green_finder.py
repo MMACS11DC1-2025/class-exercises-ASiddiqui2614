@@ -20,7 +20,7 @@ pics.append(pepper)
 parrot = "6.7/parrot.png"
 pics.append(parrot)
 
-flower = "6.7/green_flower.png"
+flower = "6.7/green_flower.jpg"
 pics.append(flower)
 
 field = "6.7/greenfield.png"
@@ -45,6 +45,8 @@ ratinglist = []
 for file in pics:
     file1 = Image.open(file)
     jbImage = file1.load()
+    
+    file2 = Image.open(file)
 
     t1 = time.time()
 
@@ -65,8 +67,9 @@ for file in pics:
 
             if six.colour(pixel_r, pixel_g, pixel_b) == "green":
                 greenPixels.append(jbImage[x, y])
+                file2.putpixel((x, y), (0, 255, 0))
                 counter += 1
-
+    file2.save(file + "_output.png")
     t2 = time.time()
 
     numGreen = len(greenPixels)
