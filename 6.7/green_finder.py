@@ -1,13 +1,13 @@
 import time
 
 import sixseven_func as six
-
+#Start time
 t0 = time.time()
 
 from PIL import Image
 
 pics = []
-
+#adding images to list to be opened later and measured
 tree = "6.7/tree.png"
 pics.append(tree)
 
@@ -49,7 +49,7 @@ for file in pics:
     file2 = Image.open(file)
 
     t1 = time.time()
-
+    #finding individual image dimensions
     width = file1.width
     height = file1.height
     counter = 0
@@ -58,7 +58,7 @@ for file in pics:
 
 
     greenPixels = []
-
+    #checking pixel color
     for x in range(width):
         for y in range(height):
             pixel_r = jbImage[x, y][0]
@@ -85,9 +85,9 @@ for file in pics:
     image_open_load = t2 - t1
     loop = t3-t2
     entire = t3 - t0
-
+    #finding percent of green
     rating = (counter / totalPixels) * 100
-
+    #rating image
     if rating < 10:
         print("This picture is bad, not enough green, it makes me really mad >>:(")
     elif rating < 20:
@@ -106,8 +106,8 @@ for file in pics:
     perc = "{:.3f}% of the picture is green".format(rating)
     print(perc)
     ratinglist.append(rating)
-#print(ratinglist)
 
+    #sorting list
 for i in range(len(ratinglist)):
     
     smallest_score = ratinglist[i]
@@ -120,4 +120,6 @@ for i in range(len(ratinglist)):
 
     ratinglist[smallest_index], ratinglist[i] = ratinglist[i], ratinglist[smallest_index]
 
-print(ratinglist)
+print("The highest percentages are " + str(ratinglist[5:]))
+
+print(six.binary_search_percent(ratinglist, ratinglist[i]))
